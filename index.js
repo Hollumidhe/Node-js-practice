@@ -2,7 +2,6 @@
 const express = require('express');
 const app = express();
 
-
 // the is for route.
 app.get('/', (req, res) => {
   res.send("Hello Folks");
@@ -13,13 +12,6 @@ app.get('/', (req, res) => {
 app.get('/api/payment/:id', (req, res) => {
   res.send(req.params.id);
 });
-
-/*
-// query parameters
-app.get('api/posts/:year/:month', (req, res) => {
-  res.send(req.query);
-});
-*/
 
 // Using environment variable (PORT)
 const port = process.env.PORT || 5000;
